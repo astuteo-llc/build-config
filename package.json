@@ -1,0 +1,26 @@
+{
+  "name": "@astuteo/build-config",
+  "version": "1.0.0",
+  "description": "Astuteo Build Boilerplage",
+  "repository": "git@github.com:astuteo-llc/build-config.git",
+  "author": "Astuteo <robot@astuteo.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.0",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "blendid": "^4.5.3",
+    "cssnano": "^4.1.10",
+    "gulp-cache": "^1.1.3",
+    "gulp-header": "^2.0.9",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-todo": "^7.1.1",
+    "postcss-color-function": "^4.1.0",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "1.2.*",
+    "tailwindcss-typography": "^3.0.1"
+  }
+}
