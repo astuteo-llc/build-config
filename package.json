@@ -1,6 +1,6 @@
 {
   "name": "@astuteo/build-config",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Astuteo Build Boilerplage",
   "repository": "git@github.com:astuteo-llc/build-config.git",
   "author": "Astuteo <robot@astuteo.com>",
@@ -10,7 +10,7 @@
     "babel-eslint": "^10.1.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.7.0",
-    "blendid": "https://github.com/dustinwalker/blendid.git",
+    "blendid": "https://github.com/astuteo-llc/blendid.git",
     "cssnano": "^4.1.10",
     "gulp-cache": "^1.1.3",
     "gulp-header": "^2.0.9",
