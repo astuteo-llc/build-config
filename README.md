@@ -1,6 +1,9 @@
 ## Build system 5.0
 Config now uses Laravel Mix 6.x. Behind the scenes the system is much different from versions 2.x and earlier and a direct upgrade may not be possible without significant configuration work. Please see Upgrade from Version 2 notes.
 
+### Add to project
+`yarn add @astuteo/build-config@latest`
+
 ### Commands
 dev: `npx mix watch`
 production: `npx mix --production`
