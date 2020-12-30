@@ -1,23 +1,14 @@
 {
   "name": "@astuteo/build-config",
-  "version": "2.6.2",
+  "version": "5.0.0",
   "description": "Astuteo Build Boilerplage",
   "repository": "git@github.com:astuteo-llc/build-config.git",
   "author": "Astuteo <robot@astuteo.com>",
   "license": "MIT",
   "dependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@fullhuman/postcss-purgecss": "^2.2.0",
-    "babel-eslint": "^10.1.0",
-    "blendid": "https://github.com/astuteo-llc/blendid.git#astuteo-3.0",
-    "cssnano": "^4.1.10",
-    "gulp-cache": "^1.1.3",
-    "gulp-header": "^2.0.9",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-postcss": "^8.0.0",
-    "gulp-todo": "^7.1.1",
-    "postcss-color-function": "^4.1.0",
-    "postcss-flexbugs-fixes": "^4.2.1",
-    "postcss-preset-env": "^6.7.0"
+    "laravel-mix": "^6.0.5",
+    "laravel-mix-banner": "^0.1.4",
+    "laravel-mix-polyfill": "^2.0.0",
+    "@astuteo/prettier-config": "^1.4.0"
   }
 }
