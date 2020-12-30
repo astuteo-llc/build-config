@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "example-project",
+  "project": "Project",
+  "author": "Astuteo LLC - https://www.astuteo.com",
+  "version": "1.0.0",
+  "prettier": "@astuteo/prettier-config",
+  "scripts": {
+    "watch": "npx mix watch",
+    "prod": "npx mix --production"
+  },
+  "dependencies": {
+    "@astuteo/build-config": "5.0.1",
+    "tailwindcss": "^2.0.2"
+  }
+}
