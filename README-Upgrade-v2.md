@@ -17,7 +17,7 @@ Changes to be aware of:
 In the config/mix/project-config.js file, adjust all the paths to match config/build/path-config.json. For more flexibility, these will not be 1:1 key names.
 
 ### Update package.json
-Add "@astuteo/build-config": "^5.0.0", as a dependency and remove any dependencies from previous build system.
+Add "@astuteo/build-config": "^5.1.0", as a dependency and remove any dependencies from previous build system.
 
 
 ### Copy webpack.config.js 
