@@ -1,6 +1,6 @@
 /**
  * CORE ASTUTEO BUILD SYSTEM
- * Version 5.0 | Updated: 12/2020
+ * Version 5.1.5 | Updated: 12/2020
  *
  * Astuteo Laravel Mix Config
  * Requires Laravel Mix 6.x
@@ -81,13 +81,6 @@ mix.js(project.jsFiles, project.dir.js)
         useBuiltIns: "usage",
         targets: false // setting to false will cause it to read from .browserslistrc
     }).sourceMaps()
-    .banner({
-        banner: (function () {
-            return banner.join('\n');
-        })(),
-        raw: true,
-    })
-    .version();
 
 /**
  * 3B. SASS
@@ -96,7 +89,7 @@ project.sassFiles.forEach(file => {
     mix.sass(file, 'css', {})
         .options({
             postCss: [require('tailwindcss')(project.tailwindconfig)],
-        }).version();
+        });
 })
 /**
  * 3C. IMAGES
@@ -129,3 +122,25 @@ mix.browserSync(
         files: project.watchFiles
     }
 );
+
+/**
+ * 3G: PRODUCTION
+ */
+if (mix.inProduction()) {
+    mix.banner({
+        banner: (function () {
+            return banner.join('\n');
+        })(),
+        raw: true,
+    });
+    mix.options({
+        terser: {
+            terserOptions: {
+                compress: {
+                    drop_console: true
+                }
+            }
+        }
+    });
+    mix.version();
+}
