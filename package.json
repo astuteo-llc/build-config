@@ -1,7 +1,7 @@
 {
   "name": "@astuteo/build-config",
   "version": "5.0.2",
-  "description": "Astuteo Build Boilerplage",
+  "description": "Astuteo Build Boilerplate",
   "repository": "git@github.com:astuteo-llc/build-config.git",
   "author": "Astuteo <robot@astuteo.com>",
   "license": "MIT",
