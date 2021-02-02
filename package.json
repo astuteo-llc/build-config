@@ -1,14 +1,14 @@
 {
   "name": "@astuteo/build-config",
-  "version": "5.1.6",
+  "version": "5.1.7",
   "description": "Astuteo Build Boilerplate",
   "repository": "git@github.com:astuteo-llc/build-config.git",
   "author": "Astuteo <robot@astuteo.com>",
   "license": "MIT",
   "dependencies": {
-    "laravel-mix": "^6.0.5",
+    "laravel-mix": "^6.0.11",
     "laravel-mix-banner": "^0.1.4",
-    "laravel-mix-polyfill": "^2.0.0",
+    "laravel-mix-polyfill": "^3.0.0",
     "@astuteo/prettier-config": "^1.4.0"
   }
 }
