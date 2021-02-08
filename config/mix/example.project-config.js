@@ -6,12 +6,12 @@ try {
 }
 module.exports = {
     defaultDomain: 'http://local-domain.test',
-    dir: {
-        public: 'public_html/site-assets',
-        css: 'css',
-        js: 'js',
-        images: 'images',
-        fonts: 'fonts'
+    dest: {
+        public: 'public_html',
+        css: 'site-assets/css',
+        js: 'site-assets/js',
+        images: 'site-assets/images',
+        fonts: 'site-assets/fonts'
     },
     jsFiles: [
         'src/js/app.js',
