@@ -1,6 +1,6 @@
 /**
  * CORE ASTUTEO BUILD SYSTEM
- * Version 5.1.5 | Updated: 12/2020
+ * Version 5.1.6 | Updated: 12/2020
  *
  * Astuteo Laravel Mix Config
  * Requires Laravel Mix 6.x
@@ -70,11 +70,11 @@ const banner = [
 /**
  * 3. LARAVEL MIX CONFIG
  */
-mix.setPublicPath(project.dir.public);
+mix.setPublicPath(project.dest.public);
 /**
  * 3A. JAVASCRIPT
  */
-mix.js(project.jsFiles, project.dir.js)
+mix.js(project.jsFiles, project.dest.js)
     .polyfill({
         enabled: true,
         debug: false,
@@ -86,7 +86,7 @@ mix.js(project.jsFiles, project.dir.js)
  * 3B. SASS
  */
 project.sassFiles.forEach(file => {
-    mix.sass(file, 'css', {})
+    mix.sass(file, project.dest.css, {})
         .options({
             postCss: [require('tailwindcss')(project.tailwindconfig)],
         });
@@ -95,14 +95,14 @@ project.sassFiles.forEach(file => {
  * 3C. IMAGES
  */
 project.imageDirectories.forEach(directory => {
-    mix.copy(directory + '/**/*', project.dir.public + '/' + project.dir.images);
+    mix.copy(directory + '/**/*', project.dest.public + '/' + project.dest.images);
 });
 /**
  * 3D. FONTS
  */
 if(typeof(project.fontDirectories) != 'undefined' && project.fontDirectories.length > 0 ) {
     project.fontDirectories.forEach(directory => {
-        mix.copy(directory + '/**/*', project.dir.public + '/' + project.dir.fonts);
+        mix.copy(directory + '/**/*', project.dest.public + '/' + project.dest.fonts);
     });
 }
 /**
