@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "name": "${project-name}",
+  "project": "${project-name}",
+  "author": "Astuteo LLC - https://www.astuteo.com",
+  "version": "1.0.0",
+  "prettier": "@astuteo/prettier-config",
+  "scripts": {
+    "watch": "`npx mix watch`",
+    "prod": "npx mix --production"
+  },
+  "dependencies": {
+    "@astuteo/build-config": "^5.2.0"
+  }
+}
