@@ -1,6 +1,6 @@
 /**
  * CORE ASTUTEO BUILD SYSTEM
- * Version 5.1.6 | Updated: 12/2020
+ * Version 5.3.0 | Updated: 2/2020
  *
  * Astuteo Laravel Mix Config
  * Requires Laravel Mix 6.x
