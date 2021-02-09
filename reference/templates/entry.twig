@@ -1,0 +1,11 @@
+{% set entryPath = 'entry/' %}
+{# Entry Handler #}
+{% include [
+    entryPath ~ entry.section.handle ~ '/' ~ entry.type ~ '/' ~ entry.slug,
+    entryPath ~ entry.section.handle ~ '/' ~ entry.slug,
+    entryPath ~ entry.section.handle ~ '/' ~ entry.type,
+    entryPath ~ entry.section.handle ~ '/default',
+    entryPath ~ entry.section.handle,
+    entryPath ~ entry.type,
+    entryPath ~ 'default'
+    ] %}

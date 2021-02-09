@@ -1,0 +1,26 @@
+{% set matrixPath = 'matrix/' %}
+{% if matrix|length %}
+    {% if craft.app.fields.fieldById(matrix.fieldId[0]) %}
+        {% set handle = craft.app.fields.fieldById(matrix.fieldId[0]).handle %}
+    {% else %}
+        {% set handle = null %}
+    {% endif %}
+
+    {% set style = style ?? null %}
+    {% for block in matrix.all() ?? null %}
+        {% include [
+            matrixPath ~ 'fieldHandle/' ~ handle ~ '/' ~ block.type,
+            matrixPath ~ 'fieldHandle/' ~ handle ~ '/default',
+            matrixPath ~ 'style/' ~ style ~ '/' ~ block.type,
+            matrixPath ~ block.type,
+            matrixPath ~ 'default'
+            ] with {
+            block: block,
+            index: loop.index,
+            next: block.next.type ?? null,
+            prev: block.prev.type ?? null,
+            context: context|default(null) ? context : 'basic',
+            handle: handle
+        } only %}
+    {% endfor %}
+{% endif %}

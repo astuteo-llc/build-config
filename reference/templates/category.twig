@@ -1,0 +1,8 @@
+{% set path = 'category/' %}
+{# Entry Handler #}
+{% include [
+    path ~ category.group.handle ~ '/' ~ category.slug,
+    path ~ category.group.handle ~ '/default',
+    path ~ category.group.handle,
+    path ~ 'default'
+    ] %}

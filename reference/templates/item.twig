@@ -1,0 +1,20 @@
+{% set itemPath = 'item/' %}
+{% switch className(entry) %}
+{% case 'craft\\commerce\\elements\\Product' %}
+    {% include [
+        itemPath ~ entry.type ~ '/' ~ entry.slug,
+        itemPath ~ style ?? 'none',
+        itemPath ~ entry.type ~ '/default',
+        itemPath ~ entry.type,
+        itemPath ~ 'defaultProduct'
+        ] %}
+{% default %}
+    {% include [
+        itemPath ~ entry.section.handle ~ '/' ~ style ?? 'none',
+        itemPath ~ style ?? 'none',
+        itemPath ~ entry.section.handle ~ '/' ~ entry.type ~ '/' ~ entry.slug,
+        itemPath ~ entry.section.handle ~ '/' ~ entry.type,
+        itemPath ~ entry.section.handle ~ '/default',
+        itemPath ~ 'default'
+        ] %}
+{% endswitch %}
