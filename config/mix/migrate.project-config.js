@@ -7,31 +7,29 @@ try {
 module.exports = {
     defaultDomain: '{{localDomain}}',
     dest: {
-        public: 'public_html',
-        css: 'site-assets/css',
-        js: 'site-assets/js',
-        images: 'site-assets/images',
-        fonts: 'site-assets/fonts'
+        public: '{{destPublic}}',
+        css: '{{destCss}}',
+        js: '{{destJs}}',
+        images: '{{destImages}}',
+        fonts: '{{destFonts}}'
     },
     jsFiles: [
-        'src/js/app.js',
-        'src/js/test.js'
+        {{jsFiles}}
     ],
     sassFiles: [
-        'src/sass/app.scss',
+        {{sassFiles}}
     ],
     imageDirectories: [
-        'src/images'
+        {{imageDirectories}}
     ],
     fontDirectories: [
-        'src/fonts'
+        {{fontDirectories}}
     ],
     staticDirectories: [
-        { src: 'src/static/**/*.*', dest: 'public_html/static/' }
+        {{staticDirectories}}
     ],
     watchFiles: [
-        'templates/**/**.*',
-        'public_html/site-assets/**/**.*'
+        {{watchFiles}}
     ],
     purge: {
         content: [
