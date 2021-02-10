@@ -7,7 +7,7 @@
 # Credentials that cannot be read from the .env file and should never
 # be commited to the repo
 REMOTE_DB_PASSWORD="${remoteDbPassword}"
-LOCAL_DB_PASSWORD="${passvar}"
+LOCAL_DB_PASSWORD="{{localPassword}}"
 # -----------------------
 
 # -- Everything below will need to be updated on a per-project basis
