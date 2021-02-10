@@ -36,7 +36,7 @@ GLOBAL_DB_DRIVER="mysql"
 
 # Local path constants; paths should always have a trailing /
 LOCAL_ROOT_PATH=$(read_var BASE_PATH .env)
-LOCAL_ASSETS_PATH=${LOCAL_ROOT_PATH}"${uploadsPath}"
+LOCAL_ASSETS_PATH=${LOCAL_ROOT_PATH}"{{assetPath}}"
 
 # Local user & group that should own the Craft CMS install
 LOCAL_CHOWN_USER="admin"
@@ -45,8 +45,8 @@ LOCAL_CHOWN_GROUP="apache"
 # Local directories relative to LOCAL_ROOT_PATH that should be writeable by the $CHOWN_GROUP
 LOCAL_WRITEABLE_DIRS=(
                 "${GLOBAL_CRAFT_PATH}storage"
-                "public_html/cpresources"
-                "public_html/assets"
+                "{{publicPath}}/cpresources"
+                "{{publicPath}}/assets"
                 )
 
 # Local asset directories relative to LOCAL_ASSETS_PATH that should be synched with remote assets
@@ -95,24 +95,24 @@ LOCAL_PSQL_CMD="psql"
 LOCAL_PG_DUMP_CMD="pg_dump"
 
 # Local backups path; paths should always have a trailing /
-LOCAL_BACKUPS_PATH=${LOCAL_ROOT_PATH}"backups/"
+LOCAL_BACKUPS_PATH=${LOCAL_ROOT_PATH}"{{backups}}/"
 
 # -- REMOTE settings --
 
 # Remote ssh credentials, user@domain.com and Remote SSH Port
 REMOTE_SSH_LOGIN="{{remoteLogin}}"
-REMOTE_SSH_PORT="22"
+REMOTE_SSH_PORT="{{remoteSSH}}"
 
 # Should we connect to the remote database server via ssh?
 REMOTE_DB_USING_SSH="yes"
 
 # Remote path constants; paths should always have a trailing /
-REMOTE_ROOT_PATH="{{remoteRootPath}}"
-REMOTE_ASSETS_PATH=${REMOTE_ROOT_PATH}"public_html/uploads/"
+REMOTE_ROOT_PATH="{{remotePath}}"
+REMOTE_ASSETS_PATH=${REMOTE_ROOT_PATH}"{{assetPath}}"
 
 # Remote database constants; default port for mysql is 3306, default port for postgres is 5432
-REMOTE_DB_NAME="{{remoteDbName}}"
-REMOTE_DB_USER="{{remoteDbUser}}"
+REMOTE_DB_NAME="{{remoteDb}}"
+REMOTE_DB_USER="{{remoteUser}}"
 REMOTE_DB_HOST="127.0.0.1"
 REMOTE_DB_PORT="3306"
 
@@ -131,11 +131,4 @@ REMOTE_PSQL_CMD="psql"
 REMOTE_PG_DUMP_CMD="pg_dump"
 
 # Remote backups path; paths should always have a trailing /
-REMOTE_BACKUPS_PATH="{{remoteBackupPassword}}"
-
-# Remote Amazon S3 bucket name
-REMOTE_S3_BUCKET="REPLACE_ME"
-
-# Optional subfolder relative to the S3 bucket root; paths should always have a trailing /
-REMOTE_S3_PATH=""
-
+REMOTE_BACKUPS_PATH="{{remoteBackup}}"
