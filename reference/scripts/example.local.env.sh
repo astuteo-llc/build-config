@@ -6,7 +6,7 @@
 # MUST UPDATE
 # Credentials that cannot be read from the .env file and should never
 # be commited to the repo
-REMOTE_DB_PASSWORD="${remoteDbPassword}"
+REMOTE_DB_PASSWORD="{{remotePassword}}"
 LOCAL_DB_PASSWORD="{{localPassword}}"
 # -----------------------
 
@@ -100,19 +100,19 @@ LOCAL_BACKUPS_PATH=${LOCAL_ROOT_PATH}"backups/"
 # -- REMOTE settings --
 
 # Remote ssh credentials, user@domain.com and Remote SSH Port
-REMOTE_SSH_LOGIN="${remoteLogin}"
+REMOTE_SSH_LOGIN="{{remoteLogin}}"
 REMOTE_SSH_PORT="22"
 
 # Should we connect to the remote database server via ssh?
 REMOTE_DB_USING_SSH="yes"
 
 # Remote path constants; paths should always have a trailing /
-REMOTE_ROOT_PATH="remote-path"
+REMOTE_ROOT_PATH="{{remoteRootPath}}"
 REMOTE_ASSETS_PATH=${REMOTE_ROOT_PATH}"public_html/uploads/"
 
 # Remote database constants; default port for mysql is 3306, default port for postgres is 5432
-REMOTE_DB_NAME="${remoteDbName}"
-REMOTE_DB_USER="${remoteDbUser}"
+REMOTE_DB_NAME="{{remoteDbName}}"
+REMOTE_DB_USER="{{remoteDbUser}}"
 REMOTE_DB_HOST="127.0.0.1"
 REMOTE_DB_PORT="3306"
 
@@ -131,7 +131,7 @@ REMOTE_PSQL_CMD="psql"
 REMOTE_PG_DUMP_CMD="pg_dump"
 
 # Remote backups path; paths should always have a trailing /
-REMOTE_BACKUPS_PATH="${remoteBackupPath}"
+REMOTE_BACKUPS_PATH="{{remoteBackupPassword}}"
 
 # Remote Amazon S3 bucket name
 REMOTE_S3_BUCKET="REPLACE_ME"
