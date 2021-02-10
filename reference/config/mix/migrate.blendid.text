@@ -33,9 +33,7 @@ module.exports = {
     ],
     purge: {
         content: [
-            './src/js/**/*.js',
-            './templates/**/*.twig',
-            './templates/**/*.html'
+            {{purge}}
         ],
         // mode: 'all', // Mode all is the old behavior. Default is to purge only tailwind @layer
         options: {
