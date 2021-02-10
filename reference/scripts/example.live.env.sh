@@ -77,7 +77,7 @@ LOCAL_REDIS_PASSWORD=""
 
 # Local database constants; default port for mysql is 3306, default port for postgres is 5432
 LOCAL_DB_NAME=$(read_var DB_DATABASE .env)
-LOCAL_DB_PASSWORD="REPLACE_ME"
+LOCAL_DB_PASSWORD="{{localPassword}}"
 LOCAL_DB_USER=$(read_var DB_USER .env)
 LOCAL_DB_HOST="localhost"
 LOCAL_DB_PORT="3306"
