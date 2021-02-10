@@ -1,3 +1,3 @@
 module.exports = {
-    domain: 'http://testing-local.test'
+    domain: '{{localDomain}}'
 }

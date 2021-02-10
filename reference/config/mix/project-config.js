@@ -5,7 +5,7 @@ try {
     console.info('Project does not have custom safelist.js');
 }
 module.exports = {
-    defaultDomain: 'http://local-domain.test',
+    defaultDomain: '{{localDomain}}',
     dest: {
         public: 'public_html',
         css: 'site-assets/css',
