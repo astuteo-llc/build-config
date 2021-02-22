@@ -4,11 +4,14 @@ on:
   push:
     tags:
       - '**'
-    tags_ignore:
-      - 'v*.*.*'
+      - '!v*.*.*'
+      - 'v*.*.*-beta'
+      - 'v*.*.*-rc'
+      - 'v*.*.*-alpha'
 
 jobs:
   build-and-deploy:
+    if: github.event.base_ref != 'refs/heads/main'
     runs-on: ubuntu-latest
     # Add private key to Github secrets and
     # add public key to authorized_keys on server
