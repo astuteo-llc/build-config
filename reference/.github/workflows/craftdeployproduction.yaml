@@ -70,6 +70,7 @@ jobs:
             cd ${{ env.PROJECT_ROOT }}
             chmod a+x craft
             php craft db/backup
+            ./scripts/backup_db.sh
             php craft migrate/all
             php craft project-config/apply
             php craft clear-caches/all
