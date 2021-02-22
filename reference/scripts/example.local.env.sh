@@ -95,7 +95,7 @@ LOCAL_PSQL_CMD="psql"
 LOCAL_PG_DUMP_CMD="pg_dump"
 
 # Local backups path; paths should always have a trailing /
-LOCAL_BACKUPS_PATH=${LOCAL_ROOT_PATH}"{{backups}}/"
+LOCAL_BACKUPS_PATH=${LOCAL_ROOT_PATH}"{{backups}}"
 
 # -- REMOTE settings --
 
