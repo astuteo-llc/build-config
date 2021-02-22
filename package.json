@@ -1,6 +1,6 @@
 {
   "name": "@astuteo/build-config",
-  "version": "5.3.0",
+  "version": "5.4.0",
   "description": "Astuteo Build Boilerplate",
   "repository": "git@github.com:astuteo-llc/build-config.git",
   "author": "Astuteo <robot@astuteo.com>",
