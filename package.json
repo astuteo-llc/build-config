@@ -8,6 +8,8 @@
   "dependencies": {
     "@astuteo/build-config": "^5.4.0",
     "@astuteo/prettier-config": "^1.4.0",
+    "@babel/core": "^7.12.17",
+    "@babel/eslint-parser": "^7.12.17",
     "eslint": "^7.20.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.0.0",
