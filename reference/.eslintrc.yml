@@ -1,0 +1,22 @@
+---
+root: true
+parser: babel-eslint
+extends:
+  # https://www.npmjs.com/package/eslint-config-airbnb-base
+  - airbnb
+  # https://github.com/prettier/eslint-config-prettier
+  - prettier
+plugins:
+  # https://github.com/prettier/eslint-plugin-prettier
+  - prettier
+
+env:
+  es6: true
+  browser: true
+
+rules:
+  prettier/prettier:
+    - error
+    -
+      trailingComma: all
+      bracketSpacing: false

@@ -6,9 +6,11 @@
   "author": "Astuteo <robot@astuteo.com>",
   "license": "MIT",
   "dependencies": {
+    "@astuteo/prettier-config": "^1.4.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.0.0",
     "laravel-mix": "^6.0.11",
     "laravel-mix-banner": "^0.1.4",
-    "laravel-mix-polyfill": "^3.0.0",
-    "@astuteo/prettier-config": "^1.4.0"
+    "laravel-mix-polyfill": "^3.0.0"
   }
 }
