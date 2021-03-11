@@ -1,17 +1,16 @@
-name: Craft CMS Staging Deploy
+name: Production Deploy
 
 on:
   push:
     tags:
-      - '**'
-      - '!v*.*.*'
-      - 'v*.*.*-beta'
-      - 'v*.*.*-rc'
-      - 'v*.*.*-alpha'
+      - 'v*.*.*'
+      - '!v*.*.*-alpha*'
+      - '!v*.*.*-beta*'
+      - '!v*.*.*-rc*'
 
 jobs:
   build-and-deploy:
-    if: github.event.base_ref != 'refs/heads/main'
+    if: github.event.base_ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     # Add private key to Github secrets and
     # add public key to authorized_keys on server
@@ -58,7 +57,7 @@ jobs:
       # Setting StrictHostKeyChecking=no will automatically add new host keys to the user known hosts files.
       - name: Deploy with rsync
         run: |
-          rsync -azh --delete-after --exclude={"/public/uploads/","/backups","/.env","/scripts/.env.sh","/node_modules/","/.git/","/.github/"} -e "ssh -o StrictHostKeyChecking=no" ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:~/${{ env.PROJECT_ROOT }}/
+          rsync -azh --delete-after --exclude={"/public/uploads/","/.env","/scripts/.env.sh","/node_modules/","/.git/","/.github/"} -e "ssh -o StrictHostKeyChecking=no" ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:~/${{ env.PROJECT_ROOT }}/
 
       # execute Craft commands on remote server
       - name: Execute SSH commmands on remote server
@@ -70,8 +69,8 @@ jobs:
           script: |
             cd ${{ env.PROJECT_ROOT }}
             chmod a+x craft
-            ./scripts/backup_db.sh
             php craft db/backup
+            ./scripts/backup_db.sh
             php craft migrate/all
             php craft project-config/apply
             php craft clear-caches/all
