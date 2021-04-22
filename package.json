@@ -13,7 +13,7 @@
     "eslint-config-airbnb-base": "14.2.1",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-prettier": "3.3.1",
-    "laravel-mix": "6.0.13",
+    "laravel-mix": "6.0.18",
     "laravel-mix-banner": "0.1.4",
     "laravel-mix-polyfill": "3.0.0"
   }
