@@ -66,6 +66,7 @@ jobs:
           host: ${{ env.SSH_HOST }}
           username: ${{ env.SSH_USER }}
           key: ${{ env.SSH_KEY }}
+          port: ${{ env.SSH_PORT }}
           script: |
             cd ${{ env.PROJECT_ROOT }}
             chmod a+x craft
@@ -73,5 +74,4 @@ jobs:
             php craft db/backup
             php craft migrate/all
             php craft project-config/apply
-            php craft clear-caches/all
             sudo -S service php${{ env.PHP_VERSION }}-fpm reload

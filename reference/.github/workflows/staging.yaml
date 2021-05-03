@@ -21,6 +21,7 @@ jobs:
       PHP_VERSION: 7.4
       SSH_HOST: IP.AD.RE.SS
       SSH_USER: forge
+      SSH_PORT: 22
       SSH_KEY: ${{ secrets.SSH_KEY }}
       NODE_VERSION: 12.x
 
@@ -33,7 +34,7 @@ jobs:
       - name: Load private SSH key
         uses: webfactory/ssh-agent@v0.5.0
         with:
-          ssh-private-key: ${{ secrets.SSH_KEY }}
+          ssh-private-key: ${{ env.SSH_KEY }}
 
       # Use a specific version of Node
       - name: Set up Node
@@ -58,7 +59,7 @@ jobs:
       # Setting StrictHostKeyChecking=no will automatically add new host keys to the user known hosts files.
       - name: Deploy with rsync
         run: |
-          rsync -azh --delete-after --exclude={"/public/uploads/","/backups","/.env","/scripts/.env.sh","/node_modules/","/.git/","/.github/"} -e "ssh -o StrictHostKeyChecking=no" ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:~/${{ env.PROJECT_ROOT }}/
+          rsync -azh --delete-after --exclude={"/public/uploads/","/backups","/.env","/scripts/.env.sh","/node_modules/","/.git/","/.github/"} -e "ssh -o StrictHostKeyChecking=no" ./ ${{ env.SSH_USER }}@${{ env.SSH_HOST }}:~/${{ env.PROJECT_ROOT }}/
 
       # execute Craft commands on remote server
       - name: Execute SSH commmands on remote server
@@ -67,6 +68,7 @@ jobs:
           host: ${{ env.SSH_HOST }}
           username: ${{ env.SSH_USER }}
           key: ${{ env.SSH_KEY }}
+          port: ${{ env.SSH_PORT }}
           script: |
             cd ${{ env.PROJECT_ROOT }}
             chmod a+x craft
@@ -74,5 +76,4 @@ jobs:
             php craft db/backup
             php craft migrate/all
             php craft project-config/apply
-            php craft clear-caches/all
             sudo -S service php${{ env.PHP_VERSION }}-fpm reload
