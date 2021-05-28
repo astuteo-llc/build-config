@@ -15,6 +15,6 @@
     "eslint-plugin-prettier": "3.4.0",
     "laravel-mix": "6.0.18",
     "laravel-mix-banner": "0.1.4",
-    "laravel-mix-polyfill": "3.0.0"
+    "laravel-mix-polyfill": "3.0.1"
   }
 }
