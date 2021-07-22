@@ -6,7 +6,7 @@
   "author": "Astuteo <robot@astuteo.com>",
   "license": "MIT",
   "dependencies": {
-    "@astuteo/prettier-config": "1.4.0",
+    "@astuteo/prettier-config": "1.4.1",
     "@astuteo/eslint-config": "1.0.2",
     "@babel/core": "7.14.8",
     "@babel/eslint-parser": "7.14.7",
