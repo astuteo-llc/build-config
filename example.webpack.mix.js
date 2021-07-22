@@ -95,14 +95,14 @@ project.sassFiles.forEach(file => {
  * 3C. IMAGES
  */
 project.imageDirectories.forEach(directory => {
-    mix.copy(directory + '/**/*', project.dest.public + '/' + project.dest.images);
+    mix.copyDirectory(directory, project.dest.public + '/' + project.dest.images);
 });
 /**
  * 3D. FONTS
  */
 if(typeof(project.fontDirectories) != 'undefined' && project.fontDirectories.length > 0 ) {
     project.fontDirectories.forEach(directory => {
-        mix.copy(directory + '/**/*', project.dest.public + '/' + project.dest.fonts);
+        mix.copyDirectory(directory, project.dest.public + '/' + project.dest.fonts);
     });
 }
 /**
@@ -110,7 +110,7 @@ if(typeof(project.fontDirectories) != 'undefined' && project.fontDirectories.len
  */
 if(typeof(project.staticDirectories) != 'undefined' && project.staticDirectories.length > 0 ) {
     project.staticDirectories.forEach(directory => {
-        mix.copy(directory.src + '/**/*', directory.dest);
+        mix.copyDirectory(directory, directory.dest);
     });
 }
 /**

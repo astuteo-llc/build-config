@@ -5,11 +5,14 @@
   "author": "Astuteo LLC - https://www.astuteo.com",
   "version": "1.0.0",
   "prettier": "@astuteo/prettier-config",
+  "eslintConfig": {
+    "extends": "@astuteo/eslint-config"
+  },
   "scripts": {
     "watch": "`npx mix watch`",
     "prod": "npx mix --production"
   },
   "dependencies": {
-    "@astuteo/build-config": "^5.2.0"
+    "@astuteo/build-config": "^5.4.18"
   }
 }
