@@ -1,3 +1,3 @@
-console.log('app js');
-import('./parts');
-import('./modules');
+console.log('app js')
+import('./parts')
+import('./modules')

@@ -1,14 +1,13 @@
-let project = require('./config/mix/project-config');
+const project = require('./config/mix/project-config')
 
 module.exports = {
-    purge: project.purge,
-    prefix: '',
-    important: false,
-    separator: ':',
-    corePlugins: {},
-    plugins: [],
-    theme: {
-        extend: {
-        }
-    }
+  purge: project.purge,
+  prefix: '',
+  important: false,
+  separator: ':',
+  corePlugins: {},
+  plugins: [],
+  theme: {
+    extend: {},
+  },
 }

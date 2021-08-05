@@ -5,6 +5,10 @@
   "repository": "git@github.com:astuteo-llc/build-config.git",
   "author": "Astuteo <robot@astuteo.com>",
   "license": "MIT",
+  "prettier": "@astuteo/prettier-config",
+  "eslintConfig": {
+    "extends": "@astuteo/eslint-config"
+  },
   "dependencies": {
     "@astuteo/prettier-config": "1.4.4",
     "@astuteo/eslint-config": "1.0.2",

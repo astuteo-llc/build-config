@@ -10,7 +10,7 @@
     "prod": "npx mix --production"
   },
   "dependencies": {
-    "@astuteo/build-config": "^5.1.0",
+    "@astuteo/build-config": "^5.4.18",
     "tailwindcss": "^2.0.2"
   }
 }
