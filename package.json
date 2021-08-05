@@ -12,7 +12,7 @@
   "dependencies": {
     "@astuteo/prettier-config": "1.4.4",
     "@astuteo/eslint-config": "1.0.2",
-    "@babel/core": "7.14.8",
+    "@babel/core": "7.15.0",
     "@babel/eslint-parser": "7.14.7",
     "eslint": "7.31.0",
     "eslint-config-airbnb-base": "14.2.1",
