@@ -132,3 +132,9 @@ REMOTE_PG_DUMP_CMD="pg_dump"
 
 # Remote backups path; paths should always have a trailing /
 REMOTE_BACKUPS_PATH="{{remoteBackup}}"
+
+# Remote Amazon S3 bucket name
+REMOTE_S3_BUCKET="REPLACE_ME"
+
+# Optional subfolder relative to the S3 bucket root; paths should always have a trailing /
+REMOTE_S3_PATH=""
