@@ -1,3 +1,14 @@
+## 5.5.2 (September 30, 2021)
+- Updated VERSION, Updated CHANGELOG.md, Bumped 5.4.20 –> 5.5.2
+- 5.5.1
+- UPDATE: minor packages
+- Merge pull request #52 from astuteo-llc/dependabot/npm_and_yarn/eslint-plugin-prettier-4.0.0
+- Merge pull request #58 from astuteo-llc/dependabot/npm_and_yarn/babel/eslint-parser-7.15.7
+- Bump eslint-plugin-prettier from 3.4.0 to 4.0.0
+- 5.5.0
+- ADD: Release script
+- Bump @babel/eslint-parser from 7.15.0 to 7.15.7
+
 ## 5.4.20 (September 30, 2021)
 - Created VERSION, Created CHANGELOG.md, Bumped to 5.4.20
 - Merge pull request #57 from astuteo-llc/dependabot/npm_and_yarn/laravel-mix-6.0.31
