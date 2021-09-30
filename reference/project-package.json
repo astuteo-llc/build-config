@@ -13,6 +13,6 @@
     "prod": "npx mix --production"
   },
   "dependencies": {
-    "@astuteo/build-config": "^5.4.18"
+    "@astuteo/build-config": "^5.5.0"
   }
 }
