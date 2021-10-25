@@ -14,7 +14,7 @@
     "@astuteo/eslint-config": "1.0.9",
     "@babel/core": "7.15.8",
     "@babel/eslint-parser": "7.15.8",
-    "eslint": "8.0.1",
+    "eslint": "8.1.0",
     "eslint-config-airbnb-base": "14.2.1",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "4.0.0",
