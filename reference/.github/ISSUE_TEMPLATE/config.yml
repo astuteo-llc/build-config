@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Feature or Project Idea
+    url: https://github.com/user/repo/discussions/new?category=ideas
+    about: Start a new discussion about your idea. Discussions can be broad and not well defined but are starting points for meetings to turn into projects.
