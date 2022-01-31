@@ -94,7 +94,7 @@ S_WARN="${LIGHTRED}"
 S_ERROR="${RED}"
 
 V_SUGGEST="0.1.0" # This is suggested in case VERSION file or user supplied version via -v is missing
-GIT_MSG=""
+GIT_MSG="RELEASE: "
 REL_NOTE=""
 REL_PREFIX="release-"
 PUSH_DEST="origin"
@@ -256,10 +256,10 @@ check-tag-exists() {
 tag() {
   if [ -z "$2" ]; then
     # Default release note
-    git tag -a "v$1" -m "Tag version $1."
+    git tag -a "release/v$1" -m "Tag version $1."
   else
     # Custom release note
-    git tag -a "v$1" -m "$2"
+    git tag -a "release/v$1" -m "$2"
   fi
   echo -e "\n${I_OK} ${S_NOTICE}Added GIT tag"
 }
@@ -316,7 +316,7 @@ do-changelog() {
 
   # Log latest commits to CHANGELOG.md:
   # Get latest commits
-  LOG_MSG=`git log --pretty=format:"- %s" $([ -n "$V_PREV" ] && echo "v${V_PREV}...HEAD") 2>&1`
+  LOG_MSG=`git log --pretty=format:"- %s" $([ -n "$V_PREV" ] && echo "release/v${V_PREV}...HEAD") 2>&1`
   if [ ! "$?" -eq 0 ]; then
     echo -e "\n${I_STOP} ${S_ERROR}Error getting commit history for logging to CHANGELOG.\n$LOG_MSG\n"
     exit 1
@@ -426,6 +426,9 @@ do-push() {
 }
 
 #### Initiate Script ###########################
+# We're not creating a branch or ever auto-pushing
+# and disabled the related functions (check-branch-exist,
+# do-branch, do-push)
 
 check-commits-exist
 
@@ -433,7 +436,7 @@ check-commits-exist
 process-arguments "$@"
 process-version
 
-check-branch-exist
+#check-branch-exist
 check-tag-exists
 
 echo -e "\n${S_LIGHT}––––––"
@@ -442,10 +445,10 @@ echo -e "\n${S_LIGHT}––––––"
 bump-json-files
 do-versionfile
 do-changelog
-do-branch
+#do-branch
 do-commit
 tag "${V_USR_INPUT}" "${REL_NOTE}"
-do-push
+#do-push
 
 echo -e "\n${S_LIGHT}––––––"
 echo -e "\n${I_OK} ${S_NOTICE}"Bumped $([ -n "${V_PREV}" ] && echo "${V_PREV} –>" || echo "to ") "$V_USR_INPUT"
