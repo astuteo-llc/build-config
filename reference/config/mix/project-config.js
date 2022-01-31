@@ -12,12 +12,13 @@ module.exports = {
     css: 'site-assets/css',
     js: 'site-assets/js',
     images: 'site-assets/images',
-    fonts: 'site-assets/fonts',
   },
   jsFiles: ['src/js/app.js', 'src/js/test.js'],
   sassFiles: ['src/sass/app.scss'],
   imageDirectories: ['src/images'],
-  fontDirectories: ['src/fonts'],
+  fontDirectories: [
+    { src: 'src/fonts/**/*.*', dest: 'public_html/site-assets/fonts/' },
+  ],
   staticDirectories: [
     { src: 'src/static/**/*.*', dest: 'public_html/static/' },
   ],
