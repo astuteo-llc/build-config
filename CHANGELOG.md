@@ -1,3 +1,25 @@
+## 5.5.9 (January 31, 2022)
+- Updated VERSION, Updated CHANGELOG.md, Bumped 5.5.2 –> 5.5.9
+- Merge branch 'feature/5' of github.com:astuteo-llc/build-config into feature/5
+- ADD: Simplified issue templates
+- UPDATES: github action workflows
+- ADD: Connect script
+- UPDATE: release reference
+- FIX: fontsDirectory array to behave like static directories
+- 5.5.8
+- 5.5.7
+- UPDATE: packages
+- UPDATE: eslint
+- 5.5.6
+- UPDATE: eslint
+- 5.5.5
+- UPDATE: eslint
+- 5.5.4
+- UPDATE: bump eslint versions
+- 5.5.3
+- 5.5.2
+- UPDATE: Packages
+
 ## 5.5.2 (September 30, 2021)
 - Updated VERSION, Updated CHANGELOG.md, Bumped 5.4.20 –> 5.5.2
 - 5.5.1
